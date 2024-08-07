@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root {
+    --FONTARIAL: Arial;
+    --MAINCOLOR: #325a42;
+    --LIGHTCOLOR: antiquewhite;
+    --FONT-SMALL: 0.8rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.navbar .container-fluid .navbar-brand {
+    color: var(--MAINCOLOR);
+}
+
+.navbar .container-fluid .offcanvas {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+.navbar .container-fluid .offcanvas-body .navbar-nav .nav-item a {
+    color: var(--MAINCOLOR);
+    font-size: 12px;
+    font-family: var(--FONTARIAL);
+}
+
+header .row {
+    height: 100vh;
+    background-image: url('./../images/hero-sec-bg.jpeg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header .row .col-md-6 .text-white {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+}
+
+.button1 {
+    border-radius: 5px;
+    color: var(--MAINCOLOR);
+    background-color: white;
+    transition: all 1000ms;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--MAINCOLOR);
+}
+  
+.button1:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+    border: 3px solid var(--MAINCOLOR);
+}
+  
+.button1::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--MAINCOLOR);
+    transform: skewX(60deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+  
+.button1:hover::before {
+    width: 250%;
+}
+
+main .branch-difference h2 {
+    color: var(--MAINCOLOR);
+}
+
+main .branch-difference i {
+    font-size: 40px;
+    background-color: var(--LIGHTCOLOR);
+    width: 80px;
+    height: 80px;
+    align-self: center;
+    align-content: center;
+    border-radius: 50%;
+}
+
+main .sec-featured {
+    background-color: #325a42;
+    font-family: var(--FONTARIAL);
+}
+
+main .sec-elevate h2 {
+    color: var(--MAINCOLOR);
+}
+
+.elevate-card1, .elevate-card3 {
+    padding: 8%;
+    color: white;
+    background: linear-gradient(150deg, var(--MAINCOLOR) 88%, var(--LIGHTCOLOR) 12%);
+}
+
+.elevate-card2 {
+    padding: 8%;
+    color: black;
+    background: linear-gradient(150deg, var(--LIGHTCOLOR) 88%, var(--MAINCOLOR) 12%);
+}
+
+.elevate-card2 .button2 {
+    position: relative;
+    border: 3px ridge black;
+    background-color: transparent;
+    color: black;
+    transition: 1s;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+  
+.elevate-card2 .button2::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: var(--LIGHTCOLOR);
+    transition: 0.5s;
+    transform-origin: center;
+}
+  
+.elevate-card2 .button2::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: var(--LIGHTCOLOR);
+    transition: 0.5s;
+}
+  
+.elevate-card2 .button2:hover::before, .elevate-card2 .button2:hover::after {
+    transform: scale(0)
+}
+  
+.elevate-card2 .button2:hover {
+    box-shadow: inset 0px 0px 20px var(--MAINCOLOR);
+}
+
+.small-font {
+    font-size: var(--FONT-SMALL);
+}
+
+.font-arial, 
+.sec-compare .table-responsive .table thead tr th, 
+.sec-compare .table-responsive .table tbody tr td {
+    font-family: var(--FONTARIAL);
+    background-color: transparent;
+    align-content: center;
+}
+
+.button2 {
+    position: relative;
+    border: 3px ridge white;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+  
+.button2::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: var(--MAINCOLOR);
+    transition: 0.5s;
+    transform-origin: center;
+}
+  
+.button2::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: var(--MAINCOLOR);
+    transition: 0.5s;
+}
+  
+.button2:hover::before, .button2:hover::after {
+    transform: scale(0)
+}
+  
+.button2:hover {
+    box-shadow: inset 0px 0px 20px antiquewhite;
+}
+
+.sec-compare .table-responsive .table thead tr th:nth-child(2) {
+    border-left: 3px solid var(--MAINCOLOR);
+    border-top: 3px solid var(--MAINCOLOR);
+    border-right: 3px solid var(--MAINCOLOR);
+}
+
+.sec-compare .table-responsive .table tbody tr td:nth-child(2) {
+    border-left: 3px solid var(--MAINCOLOR);
+    border-right: 3px solid var(--MAINCOLOR);
+}
+
+.sec-compare .table-responsive .table tbody tr .tb-b {
+    border-bottom: 3px solid var(--MAINCOLOR);
+}
+
+.sec-compare {
+    background-color: var(--LIGHTCOLOR);
+}
+
+.sec-join h2 {
+    color: var(--MAINCOLOR);
+}
+
+.sec-join .star-clr {
+    color: var(--MAINCOLOR);
+}
+
+.sec-expert {
+    background-color: lightblue;
+}
+
+.sec-expert #span {
+    color: var(--MAINCOLOR);
+    font-family: var(--FONTARIAL);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sec-expert .mx-3 p:nth-child(2) {
+    font-family: var(--FONTARIAL);
+}
+
+.button3 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+}
+   
+.button3.learn-more {
+    width: 12rem;
+    height: auto;
+}
+   
+.button3.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--MAINCOLOR);
+    border-radius: 1.625rem;
+}
+   
+.button3.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+   
+.button3.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+   
+.button3.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+   
+.button3.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: black;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+   
+.button3:hover .circle {
+    width: 100%;
+}
+   
+.button3:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+   
+.button3:hover .button-text {
+    color: #fff;
+}
+
+.sec-questions {
+    background-color: var(--LIGHTCOLOR);
+}
+
+.sec-questions .row .col-md-10 .d-flex p:first-child {
+    color: var(--MAINCOLOR);
+    font-weight: bold;
+}
+
+.sec-questions .row .col-md-10 .d-flex p:nth-child(2) {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: var(--FONTARIAL);
+    width: 50%;
+}
+
+.sec-questions button {
+    background-color: transparent;
+    color: var(--MAINCOLOR);
+}
+
+footer {
+    background-color: var(--MAINCOLOR);
+}
